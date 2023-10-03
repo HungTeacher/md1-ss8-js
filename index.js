@@ -328,9 +328,9 @@ switch(day){
 //viết 1 chương trình cho phép nhập vào số tuổi, check số tuổi đó >= 18 thì được vote, ngược lại
 //nhỏ <= 18, bạn không được quyền vote
 //ternary operator
-let ageVote = parseInt(prompt("Nhap so tuoi cua ban"))
+/*let ageVote = parseInt(prompt("Nhap so tuoi cua ban"))
 var result = (ageVote >= 18) ? "Bạn đủ điệu kiện vote" : "Bạn chưa đủ điều kiện vote"
-console.log("Kết quả là: ", result)
+console.log("Kết quả là: ", result)*/
 
 /*
 * If - else
@@ -351,7 +351,7 @@ console.log("Kết quả là: ", result)
 //Viết 1 chương trình sử dụng switch case check xem ngày hiện tại là thứ mấy trong tuần
 //Show kết quả trong thẻ p sử dụng id
 // document.getElementById(id).innerHTML
-var day;
+/*var day;
 var a = new Date().getDay()
 console.log(a)
 switch(a) {
@@ -362,4 +362,125 @@ switch(a) {
         day = "Monday"
         break;
 }
-document.getElementById("test").innerHTML = "Today is" + day
+document.getElementById("test").innerHTML = "Today is" + day*/
+
+/*e = 1;
+var e;
+console.log(e)
+
+const sum = (a, b) => a + b
+console.log(sum(2,2))*/
+
+const h1 = document.querySelectorAll("h1")
+console.log(h1)
+h1.forEach(item => item.title = "hello world")
+// h1.innerHTML = "Hello word"
+
+// const className = h1.getAttribute("class")
+// console.log(className)
+
+var json = '["JS", "PHP"]'
+console.log(typeof json)
+console.log(typeof JSON.parse(json))
+var json2 = ["JS", "PHP"]
+console.log(typeof JSON.stringify(json2))
+
+for (var i = 1; i <= 10; i++) {
+    var product = 5 * i
+    document.write("5 x "+ i + " = " + product + "<br />")
+}
+
+for (let i = 0, j = 10; i <= 10; i++, j--) {
+    let sum = i + j;
+    document.write(i + " + " + j + " = " + sum + "<br />")
+}
+
+/*let text = "Hello"
+
+while (text !== 'q' && text !== '') {
+    text = prompt('Enter a text to print. Enter "q" to quit.')
+    document.write(text + '<br />');
+}*/
+
+/*let count = 0
+let text = ''
+while (count < 50) {
+    text += '<hr width="' + count + '%">';
+    count++;
+}
+document.getElementById("shape").innerHTML = text*/
+
+/*let text = ''
+for (let count = 0; count < 50; count++) {
+    text += '<hr width="' + count + '%">';
+}
+document.getElementById("shape").innerHTML = text*/
+
+/*
+for (let i = 0; i >= 0; i++) {
+    document.write("i = " + i + "<br />")
+}
+
+let i = 0;
+while (i >= 0) {
+    document.write("i = " + i + "<br />")
+
+}*/
+/*let sum = 0;
+let number;
+do {
+    number = parseInt(prompt('Enter a number'))
+    sum += number; // sum = sum + number
+} while(number != 0)
+
+document.write("The sum is: " +sum)*/
+
+let text = ''
+for (let i = 0; i <= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    text += 'The number is ' + i + '<br />'
+}
+document.getElementById('result').innerHTML = text
+
+var myArr4 = [
+    [1,2], //i = 0
+    [3,4], //i = 1
+    [5,6], //i = 2
+]
+// var a = []
+for (let i = 0; i < myArr4.length; i++) {
+    for (let j = 0; j < myArr4[0].length; j++) {
+        console.log(myArr4[i][j]) //myArr4[0][0] => 1
+        // myArr4[0][1] => 2
+        // myArr4[1][0] => 3
+    }
+}
+/*var result = a.join()
+console.log("result: ", result)*/
+//1 2 3 4 5 6
+
+/*
+************
+************
+************
+************
+************
+************
+* */
+for (let i = 0; i < 5; i++) {
+    for(let j = 0; j < 10; j ++) {
+        document.write("*")
+    }
+    document.write("*" + "<br />")
+}
+
+// in ra 0 2 4 6 8 sử dụng vòng lặp for kết hợp continue
+// let text= ''
+for (let i = 0; i < 9; i ++) {
+    if (i % 2 !== 0) {
+            continue
+    }
+    console.log(i)
+}
