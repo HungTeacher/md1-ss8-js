@@ -484,3 +484,125 @@ for (let i = 0; i < 9; i ++) {
     }
     console.log(i)
 }
+
+var array = [1,2,3,4,5,6,7,8,9,10]
+// for (let el in array) {
+//     console.log("element = " + el)
+// }
+for (let i = 0; i < array.length; i++) {
+    console.log("element = " + array[i])
+}
+
+let cars = new Array('honda', 'suzuki', 'vinfast')
+let text2 = ''
+for (let i = 0; i < cars.length; i++) {
+    text2 += cars[i] + '<br />'
+}
+document.write(text2)
+
+let fruits= ['Banana', 'Grange', 'Apple', 'Orange']
+// alert(fruits.length)
+// fruits.push('Lemon')
+fruits[fruits.length] = 'Watermelon'
+document.write(fruits)
+
+let nums = [1,2,3]
+console.log(nums.join())
+console.log(nums.join(' '))
+console.log(nums.join(''))
+console.log(nums.join('-'))
+console.log(nums.reverse().join())
+let arr2 = new Array(10)
+console.log(arr2.join('-'))
+
+let arr3 = new Array('watermelon','Banana', 'orange', 'banana', 2,5,1, "*", "$")
+
+arr3.sort()
+console.log(arr3.join(', '))
+
+let arr4 = [33, 44, 111, 222, 5555]
+arr4.sort() // sort theo Alphabet order
+arr4.sort(function (a, b) {
+    return b - a
+})
+console.log(arr4)
+
+let arr5 = ['Bug', 'ant', 'cat', 'Dog']
+/*arr5.sort()
+console.log(arr5)*/
+arr5.sort(function (s, t) {
+    let a = s.toLocaleLowerCase() // ant
+    let b = t.toLocaleLowerCase() //bug
+    if ( a < b) return -1; // [a, b]
+    if ( a > b) return 1; // [b, a]
+    return 0 //giu nguyen vi tri ban dau
+})
+console.log(arr5)
+
+let arr6 = [5,6,7]
+// arr6.concat(9,10)
+console.log(arr6.concat(9,10))
+console.log(arr6.concat([9,10], [11,12]))
+console.log(arr6.concat(8,[9,[10,11]]))
+
+let stack = []
+stack.push(1,2,3,4,5,6)
+stack.unshift(1)
+const lastEl = stack.pop()
+console.log(stack.toString())
+
+let courses = [
+    {
+        id: 1,
+        name: "Javascript",
+        price:250
+    },
+    {
+        id: 2,
+        name: "HTML, CSS",
+        price: 150
+    },
+    {
+        id: 3,
+        name: "NodeJs",
+        price: 350
+    },
+    {
+        id: 4,
+        name: "ReactJs",
+        price: 0
+    }
+]
+let isFree = courses.every(function (course,index) {
+    // console.log(course)
+    return course.price == 0
+})
+console.log(isFree) //false
+
+// tìm kiếm khoá học có tên là HTML, CSS
+let isFree1 = courses.find(function (course, index) {
+    return course.name === "HTML, CSS"
+})
+console.log(isFree1)
+
+let isFree2 = courses.filter(function (course, index) {
+    return course.price >= 150
+})
+console.log(isFree2)
+
+let isFree3  = courses.map(function (course, index) {
+    // const newPrice = course.price * 0.5
+    const newCourse = {
+        id: course.id,
+        name: course.name,
+        price: course.price * .5
+    }
+    return newCourse
+})
+console.log(isFree3)
+
+let isFree4 = courses.reduce(function (acc, currVal){
+    // console.log(accumulator, currentValue)
+    return acc + currVal.price
+}, 1)
+console.log(isFree4)
