@@ -1,6 +1,7 @@
 function myFunction() {
     document.getElementById("demo").innerHTML = "Hello cac ban"
 }
+
 // myFunction()
 
 /*var x, y, z; //declaration
@@ -80,7 +81,7 @@ console.log("str: ", str)
 
 var x = 1;
 var y = "1";
-if(x === y) {
+if (x === y) {
     console.log("Dieu kien dung")
 } else {
     console.log("Dieu kien sai")
@@ -104,7 +105,7 @@ var z = 3;
 if (m > 0 && n > 0 && z < 0) {
     console.log("Dieu kien dung")
 }
-if( m < 0 || n< 0 || z > 0) {
+if (m < 0 || n < 0 || z > 0) {
     console.log("Dieu kien dung")
 }
 
@@ -131,13 +132,15 @@ var myFunc = function funcName() {
 // myFunc()
 
 //Declaration
-function submit() {}
+function submit() {
+}
 
 var myObject = {
     name: "Minh Hung",
     age: 18,
     address: "HCM",
-    myFunc: function () {}
+    myFunc: function () {
+    }
 }
 //Array : []
 var myArr = ["JS", "PHP", "React"]
@@ -174,9 +177,9 @@ var fullName3 = "day la dau \\"
 console.log(fullName3)
 var fullName4 = "Minh Hung "
 console.log(fullName4.length)
-var fullName5 = "Một số case sử dụng backslash" + "1.Một số case sử dụng backslash" +  "2.Một số case sử dụng backslash"
+var fullName5 = "Một số case sử dụng backslash" + "1.Một số case sử dụng backslash" + "2.Một số case sử dụng backslash"
 console.log(fullName5)
-var firstName1  = "Quan"
+var firstName1 = "Quan"
 var lastName1 = "Duong"
 console.log(`Toi la: ${firstName1} ${lastName1}`)
 
@@ -199,7 +202,7 @@ console.log(myString.indexOf("ABC")) //-1
 var myString2 = "De nong dan biet code va lam code"
 console.log(myString2.indexOf("code", 20))// 29
 console.log(myString2.lastIndexOf("code")) //29
-console.log(myString.slice(4,6)) //on
+console.log(myString.slice(4, 6)) //on
 console.log(myString.slice(3)) //nong dan biet code
 console.log(myString.replace(/code/g, "dev"))
 console.log(myString.toUpperCase())
@@ -387,7 +390,7 @@ console.log(typeof JSON.stringify(json2))
 
 for (var i = 1; i <= 10; i++) {
     var product = 5 * i
-    document.write("5 x "+ i + " = " + product + "<br />")
+    document.write("5 x " + i + " = " + product + "<br />")
 }
 
 for (let i = 0, j = 10; i <= 10; i++, j--) {
@@ -445,9 +448,9 @@ for (let i = 0; i <= 5; i++) {
 document.getElementById('result').innerHTML = text
 
 var myArr4 = [
-    [1,2], //i = 0
-    [3,4], //i = 1
-    [5,6], //i = 2
+    [1, 2], //i = 0
+    [3, 4], //i = 1
+    [5, 6], //i = 2
 ]
 // var a = []
 for (let i = 0; i < myArr4.length; i++) {
@@ -470,7 +473,7 @@ console.log("result: ", result)*/
 ************
 * */
 for (let i = 0; i < 5; i++) {
-    for(let j = 0; j < 10; j ++) {
+    for (let j = 0; j < 10; j++) {
         document.write("*")
     }
     document.write("*" + "<br />")
@@ -478,14 +481,14 @@ for (let i = 0; i < 5; i++) {
 
 // in ra 0 2 4 6 8 sử dụng vòng lặp for kết hợp continue
 // let text= ''
-for (let i = 0; i < 9; i ++) {
+for (let i = 0; i < 9; i++) {
     if (i % 2 !== 0) {
-            continue
+        continue
     }
     console.log(i)
 }
 
-var array = [1,2,3,4,5,6,7,8,9,10]
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // for (let el in array) {
 //     console.log("element = " + el)
 // }
@@ -500,13 +503,13 @@ for (let i = 0; i < cars.length; i++) {
 }
 document.write(text2)
 
-let fruits= ['Banana', 'Grange', 'Apple', 'Orange']
+let fruits = ['Banana', 'Grange', 'Apple', 'Orange']
 // alert(fruits.length)
 // fruits.push('Lemon')
 fruits[fruits.length] = 'Watermelon'
 document.write(fruits)
 
-let nums = [1,2,3]
+let nums = [1, 2, 3]
 console.log(nums.join())
 console.log(nums.join(' '))
 console.log(nums.join(''))
@@ -515,7 +518,7 @@ console.log(nums.reverse().join())
 let arr2 = new Array(10)
 console.log(arr2.join('-'))
 
-let arr3 = new Array('watermelon','Banana', 'orange', 'banana', 2,5,1, "*", "$")
+let arr3 = new Array('watermelon', 'Banana', 'orange', 'banana', 2, 5, 1, "*", "$")
 
 arr3.sort()
 console.log(arr3.join(', '))
@@ -533,20 +536,20 @@ console.log(arr5)*/
 arr5.sort(function (s, t) {
     let a = s.toLocaleLowerCase() // ant
     let b = t.toLocaleLowerCase() //bug
-    if ( a < b) return -1; // [a, b]
-    if ( a > b) return 1; // [b, a]
+    if (a < b) return -1; // [a, b]
+    if (a > b) return 1; // [b, a]
     return 0 //giu nguyen vi tri ban dau
 })
 console.log(arr5)
 
-let arr6 = [5,6,7]
+let arr6 = [5, 6, 7]
 // arr6.concat(9,10)
-console.log(arr6.concat(9,10))
-console.log(arr6.concat([9,10], [11,12]))
-console.log(arr6.concat(8,[9,[10,11]]))
+console.log(arr6.concat(9, 10))
+console.log(arr6.concat([9, 10], [11, 12]))
+console.log(arr6.concat(8, [9, [10, 11]]))
 
 let stack = []
-stack.push(1,2,3,4,5,6)
+stack.push(1, 2, 3, 4, 5, 6)
 stack.unshift(1)
 const lastEl = stack.pop()
 console.log(stack.toString())
@@ -555,7 +558,7 @@ let courses = [
     {
         id: 1,
         name: "Javascript",
-        price:250
+        price: 250
     },
     {
         id: 2,
@@ -573,7 +576,7 @@ let courses = [
         price: 0
     }
 ]
-let isFree = courses.every(function (course,index) {
+let isFree = courses.every(function (course, index) {
     // console.log(course)
     return course.price == 0
 })
@@ -590,7 +593,7 @@ let isFree2 = courses.filter(function (course, index) {
 })
 console.log(isFree2)
 
-let isFree3  = courses.map(function (course, index) {
+let isFree3 = courses.map(function (course, index) {
     // const newPrice = course.price * 0.5
     const newCourse = {
         id: course.id,
@@ -601,8 +604,21 @@ let isFree3  = courses.map(function (course, index) {
 })
 console.log(isFree3)
 
-let isFree4 = courses.reduce(function (acc, currVal){
+let isFree4 = courses.reduce(function (acc, currVal) {
     // console.log(accumulator, currentValue)
     return acc + currVal.price
 }, 1)
 console.log(isFree4)
+
+    //Declaration
+    /*function showDialog() {
+        alert("Hello cac ban")
+    }*/
+    // showDialog()
+
+    //IIFE
+   /* (function() {
+        console.log("Hello cac ban")
+    })();*/
+
+
